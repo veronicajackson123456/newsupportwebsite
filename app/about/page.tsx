@@ -115,7 +115,7 @@ export default function About() {
                   MCOL LTD was founded with a clear mission: to make enterprise-grade Property Management System technology accessible, reliable, and genuinely useful for hospitality businesses of every scale. Too many hotels and property managers were struggling with outdated systems, poor support, and disconnected technology stacks. We set out to change that.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-5">
-                  Today, we support over 200 properties across the UK, delivering cloud-based PMS platforms, seamless integrations, structured training programmes, and dedicated 24/7 technical support. Our team of certified PMS consultants, integration engineers, and training specialists brings decades of combined hospitality and technology experience to every engagement.
+                  Today, we deliver cloud-based PMS platforms, seamless integrations, structured training programmes, and dedicated 24/7 technical support to hospitality businesses across the UK. Our team of certified PMS consultants, integration engineers, and training specialists brings decades of combined hospitality and technology experience to every engagement.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   We don&apos;t just implement software and walk away. We build long-term partnerships — learning your business, understanding your goals, and working alongside your team to ensure you get maximum value from your investment in technology.
@@ -150,7 +150,7 @@ export default function About() {
           </div>
         </section>
 
-        {/* ── MISSION & VISION ──────────────────────────────────────── */}
+        {/* ��─ MISSION & VISION ──────────────────────────────────────── */}
         <section className="bg-surface-darker py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -208,7 +208,7 @@ export default function About() {
                   CONTACT <span className="text-primary">MCOL LTD</span> TODAY
                 </h2>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Whether you&apos;re evaluating your first PMS, migrating from a legacy system, or looking for better support on your existing platform, our team is ready to help. Get in touch for a free consultation and discover why over 200 properties trust MCOL LTD.
+                  Whether you&apos;re evaluating your first PMS, migrating from a legacy system, or looking for better support on your existing platform, our team is ready to help. Get in touch for a free consultation.
                 </p>
                 <Link
                   href="/contact"

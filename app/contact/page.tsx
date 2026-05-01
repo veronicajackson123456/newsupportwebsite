@@ -50,7 +50,7 @@ const benefits = [
   { title: 'Fast Response', description: 'We respond to all new enquiries within 24 business hours, and urgent issues are handled immediately for contracted clients.' },
   { title: 'Free Consultation', description: 'Our initial discovery call is completely free with no obligation — we want to understand your needs before making any recommendations.' },
   { title: 'Tailored Solutions', description: 'Every proposal we produce is customised to your specific property type, size, existing technology stack, and operational requirements.' },
-  { title: 'Proven Track Record', description: 'Trusted by over 200 properties across the UK, with a track record of on-time, on-budget deliveries and long-term client retention.' },
+  { title: 'Proven Track Record', description: 'Experienced team delivering on-time, on-budget implementations with a strong track record of long-term client retention and success.' },
 ]
 
 export default function Contact() {
