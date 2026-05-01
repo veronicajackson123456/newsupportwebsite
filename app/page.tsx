@@ -36,8 +36,6 @@ const marqueeItems = [
 ]
 
 const stats = [
-  { value: '10+', label: 'Years of Experience' },
-  { value: '200+', label: 'Properties Supported' },
   { value: '50+', label: 'Integrations Delivered' },
   { value: '99.5%', label: 'Uptime Guarantee' },
 ]
@@ -251,15 +249,7 @@ export default function Home() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-surface-darker/50 to-transparent" />
                 </div>
-                {/* Floating stat card */}
-                <div className="absolute -bottom-5 -left-5 bg-card border border-border rounded-lg p-4 shadow-xl">
-                  <div className="text-2xl font-bold text-primary">200+</div>
-                  <div className="text-xs text-muted-foreground mt-0.5">Properties Supported</div>
-                </div>
-                <div className="absolute -top-5 -right-5 bg-primary rounded-lg p-4 shadow-xl">
-                  <div className="text-2xl font-bold text-primary-foreground">10+</div>
-                  <div className="text-xs text-primary-foreground/80 mt-0.5">Years Experience</div>
-                </div>
+
               </div>
             </div>
           </div>
