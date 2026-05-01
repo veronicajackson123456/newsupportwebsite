@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
+import { ChevronRight, Mail, Phone, MapPin } from 'lucide-react'
 
 interface Section {
   title: string
@@ -20,29 +21,32 @@ const legalPages = [
   { label: 'Cookie Policy', href: '/cookies' },
   { label: 'Acceptable Use Policy', href: '/acceptable-use' },
   { label: 'Disclaimer', href: '/disclaimer' },
+  { label: 'Service Level Agreement', href: '/service-level-agreement' },
+  { label: 'Data Processing Agreement', href: '/dpa' },
+  { label: 'Intellectual Property Policy', href: '/intellectual-property' },
+  { label: 'Accessibility Statement', href: '/accessibility' },
 ]
 
 export default function LegalLayout({ title, lastUpdated, description, sections }: LegalLayoutProps) {
   return (
     <>
       <Header />
-      <main className="bg-background">
+      <main className="bg-surface-darker">
         {/* Hero */}
-        <section className="bg-primary pt-14 pb-12">
+        <section className="bg-surface-darker border-b border-border py-14 md:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <nav aria-label="Breadcrumb" className="mb-6 text-sm text-primary-foreground/70">
-              <ol className="flex items-center gap-2">
-                <li><Link href="/" className="hover:text-primary-foreground transition-colors">Home</Link></li>
-                <li aria-hidden="true">/</li>
-                <li><Link href="/legal" className="hover:text-primary-foreground transition-colors">Legal</Link></li>
-                <li aria-hidden="true">/</li>
-                <li className="text-primary-foreground font-medium" aria-current="page">{title}</li>
-              </ol>
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-muted-foreground mb-8">
+              <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+              <ChevronRight className="w-3 h-3" />
+              <Link href="/legal" className="hover:text-primary transition-colors">Legal</Link>
+              <ChevronRight className="w-3 h-3" />
+              <span className="text-foreground" aria-current="page">{title}</span>
             </nav>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground text-balance leading-tight">
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Legal Documents</p>
+            <h1 className="text-3xl md:text-5xl font-extrabold text-foreground text-balance leading-tight mb-3">
               {title}
             </h1>
-            <p className="mt-3 text-primary-foreground/75 text-sm">Last updated: {lastUpdated}</p>
+            <p className="text-muted-foreground text-sm">Last updated: {lastUpdated}</p>
           </div>
         </section>
 
@@ -50,20 +54,21 @@ export default function LegalLayout({ title, lastUpdated, description, sections 
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Sidebar */}
             <aside className="lg:w-64 flex-shrink-0">
-              <div className="lg:sticky lg:top-24">
-                <h2 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground mb-4">Legal Documents</h2>
+              <div className="lg:sticky lg:top-28">
+                <h2 className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">Legal Documents</h2>
                 <nav aria-label="Legal pages navigation">
                   <ul className="space-y-1">
                     {legalPages.map((page) => (
                       <li key={page.href}>
                         <Link
                           href={page.href}
-                          className={`block px-4 py-2.5 rounded-lg text-sm font-medium transition-colors ${
+                          className={`flex items-center gap-2 px-4 py-2.5 rounded text-sm font-medium transition-colors ${
                             page.label === title
                               ? 'bg-primary text-primary-foreground'
-                              : 'text-foreground hover:bg-muted'
+                              : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                           }`}
                         >
+                          {page.label === title && <ChevronRight className="w-3 h-3 flex-shrink-0" />}
                           {page.label}
                         </Link>
                       </li>
@@ -72,14 +77,14 @@ export default function LegalLayout({ title, lastUpdated, description, sections 
                 </nav>
 
                 {/* Contact Box */}
-                <div className="mt-8 p-5 bg-muted rounded-xl border border-border">
-                  <h3 className="text-sm font-semibold text-foreground mb-2">Need help?</h3>
+                <div className="mt-8 p-5 bg-card rounded-lg border border-border">
+                  <h3 className="text-sm font-bold text-foreground mb-2">Need Help?</h3>
                   <p className="text-xs text-muted-foreground leading-relaxed mb-4">
-                    If you have questions about our legal policies, please contact us directly.
+                    Questions about our legal policies? Our team is ready to help.
                   </p>
                   <Link
                     href="/contact"
-                    className="block text-center bg-primary text-primary-foreground text-sm font-medium px-4 py-2 rounded-lg hover:opacity-90 transition-opacity"
+                    className="block text-center bg-primary text-primary-foreground text-xs font-semibold px-4 py-2.5 rounded hover:opacity-90 transition-opacity uppercase tracking-wide"
                   >
                     Contact Us
                   </Link>
@@ -96,10 +101,11 @@ export default function LegalLayout({ title, lastUpdated, description, sections 
               <div className="space-y-10">
                 {sections.map((section, index) => (
                   <section key={index} id={`section-${index + 1}`}>
-                    <h2 className="text-xl font-bold text-foreground mb-4 pb-2 border-b border-border">
-                      {index + 1}. {section.title}
+                    <h2 className="text-lg font-bold text-foreground mb-4 pb-2 border-b border-border flex items-center gap-3">
+                      <span className="text-primary text-sm">{String(index + 1).padStart(2, '0')}.</span>
+                      {section.title}
                     </h2>
-                    <div className="text-muted-foreground leading-relaxed space-y-3">
+                    <div className="text-muted-foreground leading-relaxed space-y-3 text-sm">
                       {section.content}
                     </div>
                   </section>
@@ -107,23 +113,32 @@ export default function LegalLayout({ title, lastUpdated, description, sections 
               </div>
 
               {/* Contact Footer */}
-              <div className="mt-14 p-8 bg-muted rounded-2xl border border-border">
-                <h2 className="text-xl font-bold text-foreground mb-2">Contact Us</h2>
+              <div className="mt-14 p-8 bg-card rounded-lg border border-border">
+                <h2 className="text-lg font-bold text-foreground mb-2">Contact Us</h2>
                 <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
-                  If you have any questions about this document or our practices, please reach out.
+                  If you have any questions about this document or our data practices, please reach out to us directly.
                 </p>
-                <div className="grid sm:grid-cols-2 gap-4 text-sm">
-                  <div>
-                    <span className="font-semibold text-foreground block mb-0.5">Email</span>
-                    <a href="mailto:info@mcol.online" className="text-primary hover:underline">info@mcol.online</a>
+                <div className="grid sm:grid-cols-2 gap-5 text-sm">
+                  <div className="flex items-start gap-3">
+                    <Mail className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-foreground block mb-0.5">Email</span>
+                      <a href="mailto:info@mcol.online" className="text-primary hover:underline">info@mcol.online</a>
+                    </div>
                   </div>
-                  <div>
-                    <span className="font-semibold text-foreground block mb-0.5">Phone</span>
-                    <a href="tel:+447424488818" className="text-primary hover:underline">+44(0)7424 488818</a>
+                  <div className="flex items-start gap-3">
+                    <Phone className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-foreground block mb-0.5">Phone</span>
+                      <a href="tel:+447424488818" className="text-primary hover:underline">+44 (0)7424 488818</a>
+                    </div>
                   </div>
-                  <div className="sm:col-span-2">
-                    <span className="font-semibold text-foreground block mb-0.5">Registered Address</span>
-                    <span className="text-muted-foreground">72 High Street, Easterton, Devizes, Wiltshire, SN10 4PG</span>
+                  <div className="flex items-start gap-3 sm:col-span-2">
+                    <MapPin className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <span className="font-semibold text-foreground block mb-0.5">Registered Address</span>
+                      <span className="text-muted-foreground">72 High Street, Easterton, Devizes, Wiltshire, SN10 4PG</span>
+                    </div>
                   </div>
                   <div>
                     <span className="font-semibold text-foreground block mb-0.5">Company No.</span>

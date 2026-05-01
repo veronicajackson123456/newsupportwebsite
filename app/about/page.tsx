@@ -1,128 +1,258 @@
-'use client'
-
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import Link from 'next/link'
-import { CheckCircle } from 'lucide-react'
+import Image from 'next/image'
+import {
+  ChevronRight,
+  ArrowRight,
+  CheckCircle2,
+  Shield,
+  Zap,
+  Globe,
+  HeadphonesIcon,
+  TrendingUp,
+  Users,
+} from 'lucide-react'
+
+const stats = [
+  { value: '50+', label: 'Integrations Delivered' },
+  { value: '99.5%', label: 'Uptime Guarantee' },
+]
+
+const values = [
+  {
+    icon: Shield,
+    title: 'Reliability',
+    description: '99.5% uptime commitment backed by enterprise-grade cloud infrastructure with geographic redundancy and automatic failover.',
+  },
+  {
+    icon: Shield,
+    title: 'Security',
+    description: 'GDPR and PCI DSS compliant platform with end-to-end encryption, role-based access controls, and regular penetration testing.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Scalability',
+    description: 'Solutions architected to grow with your business — from a single boutique property to a multi-site enterprise portfolio.',
+  },
+  {
+    icon: HeadphonesIcon,
+    title: '24/7 Support',
+    description: 'Around-the-clock dedicated technical support with guaranteed SLA response times and a named account manager for every client.',
+  },
+  {
+    icon: Zap,
+    title: 'Innovation',
+    description: 'Continuous platform development with quarterly feature releases, integration expansions, and emerging technology adoption.',
+  },
+  {
+    icon: Users,
+    title: 'Partnership',
+    description: 'We build long-term relationships, not one-time transactions. Your success is our success — and we mean it.',
+  },
+]
+
+const whyUs = [
+  {
+    icon: Globe,
+    title: 'UK-Based Expertise',
+    description: 'Our team is based in the UK and has deep understanding of the domestic hospitality market, UK compliance requirements, and the nuances that matter to British operators.',
+  },
+  {
+    icon: CheckCircle2,
+    title: 'End-to-End Delivery',
+    description: 'From initial scoping and configuration to data migration, training, go-live, and ongoing support — we manage the entire journey so you can focus on running your property.',
+  },
+  {
+    icon: Users,
+    title: 'Dedicated Account Management',
+    description: 'Every contracted client is assigned a dedicated account manager who knows your property, your team, and your goals — ensuring consistent, personalised service.',
+  },
+  {
+    icon: TrendingUp,
+    title: 'Proven ROI',
+    description: 'Our clients consistently report reductions in manual workload, faster check-in times, improved OTA performance, and measurable increases in revenue through better rate management.',
+  },
+]
+
 
 export default function About() {
-  const values = [
-    {
-      title: 'Integrity',
-      description: "We do what's right, every time.",
-      icon: '✓',
-    },
-    {
-      title: 'Efficiency',
-      description: 'We optimise processes for peak performance.',
-      icon: '⚡',
-    },
-    {
-      title: 'Confidentiality',
-      description: 'Your business information stays secure.',
-      icon: '🔒',
-    },
-    {
-      title: 'Partnership',
-      description: 'We work as an extension of your team.',
-      icon: '🤝',
-    },
-    {
-      title: 'Excellence',
-      description: 'We aim for outstanding results in every task.',
-      icon: '⭐',
-    },
-  ]
-
   return (
     <>
       <Header />
-      <main className="bg-white">
-        {/* Hero Section */}
-        <section className="pt-12 md:pt-20 pb-12 md:pb-16 bg-gradient-to-br from-white to-blue-50">
+      <main>
+        {/* ── PAGE HERO ──────────────────────────────────────────── */}
+        <section className="bg-surface-darker border-b border-border py-16 md:py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="text-5xl">🎯</span>
-              <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Who We Are
-              </h1>
-            </div>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-              MCOL LTD is a multidisciplinary business support firm committed to helping organisations thrive in every stage of growth. Our mission is simple — to provide professional, reliable, and scalable support that allows you to focus on strategic priorities while we handle the day-to-day complexities of running a business.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mt-6">
-              Founded on principles of trust, integrity, and excellence, we bring together a team of specialists with decades of experience across multiple industries — including finance, operations, human resources, and digital transformation.
+            <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-xs text-muted-foreground mb-8">
+              <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+              <ChevronRight className="w-3 h-3" />
+              <span className="text-foreground">About Us</span>
+            </nav>
+            <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">About MCOL LTD</p>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-foreground leading-none tracking-tight mb-6 text-balance">
+              WE INNOVATE TECHNOLOGY{' '}
+              <span className="text-primary">THAT POWERS</span>{' '}
+              YOUR FUTURE
+            </h1>
+            <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl">
+              MCOL LTD is a UK-based enterprise technology partner specialising in Property Management System solutions for hotels, serviced apartments, and property management groups — combining deep sector expertise with long-term client partnerships.
             </p>
           </div>
         </section>
 
-        {/* Vision & Mission */}
-        <section className="py-16 md:py-20 bg-gray-50">
+        {/* ── WHO WE ARE ───────────────────────────────────────────── */}
+        <section className="bg-surface-mid py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-4xl">🚀</span>
-                  <h2 className="text-2xl font-bold text-gray-900">Our Vision</h2>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Our Story</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-foreground leading-tight mb-6 text-balance">
+                  YOUR RELIABLE PARTNER IN{' '}
+                  <span className="text-primary">PMS & HOSPITALITY TECHNOLOGY</span>
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-5">
+                  MCOL LTD was founded with a clear mission: to make enterprise-grade Property Management System technology accessible, reliable, and genuinely useful for hospitality businesses of every scale. Too many hotels and property managers were struggling with outdated systems, poor support, and disconnected technology stacks. We set out to change that.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-5">
+                  Today, we deliver cloud-based PMS platforms, seamless integrations, structured training programmes, and dedicated 24/7 technical support to hospitality businesses across the UK. Our team of certified PMS consultants, integration engineers, and training specialists brings decades of combined hospitality and technology experience to every engagement.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  We don&apos;t just implement software and walk away. We build long-term partnerships — learning your business, understanding your goals, and working alongside your team to ensure you get maximum value from your investment in technology.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded font-semibold text-sm hover:opacity-90 transition-opacity"
+                >
+                  Work With Us <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div>
+                <div className="relative rounded-lg overflow-hidden border border-border mb-6">
+                  <Image
+                    src="/about-team.jpg"
+                    alt="MCOL LTD team"
+                    width={600}
+                    height={420}
+                    className="w-full h-auto object-cover"
+                  />
                 </div>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  To be the most trusted business support partner globally, empowering companies to operate efficiently, grow sustainably, and reach their full potential.
+                <div className="grid grid-cols-2 gap-4">
+                  {stats.map((stat) => (
+                    <div key={stat.label} className="bg-card border border-border rounded-lg p-5 text-center">
+                      <div className="text-3xl font-extrabold text-primary">{stat.value}</div>
+                      <div className="text-xs text-muted-foreground mt-1 leading-tight">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ��─ MISSION & VISION ──────────────────────────────────────── */}
+        <section className="bg-surface-darker py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-card border border-border rounded-lg p-8 md:p-10 hover:border-primary/40 transition-colors">
+                <div className="w-12 h-0.5 bg-primary mb-6" />
+                <h2 className="text-2xl font-extrabold text-foreground mb-4">Our Mission</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                  To deliver enterprise-grade PMS solutions and comprehensive support services that empower hospitality businesses to streamline operations, reduce costs, enhance guest satisfaction, and achieve sustainable long-term growth. We make complex technology simple, reliable, and genuinely valuable.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition-shadow">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-4xl">💡</span>
-                  <h2 className="text-2xl font-bold text-gray-900">Our Mission</h2>
-                </div>
-                <p className="text-gray-700 leading-relaxed text-lg">
-                  To deliver innovative, cost-effective, and comprehensive business solutions that help clients save time, reduce costs, and achieve measurable results.
+              <div className="bg-primary rounded-lg p-8 md:p-10">
+                <div className="w-12 h-0.5 bg-primary-foreground/40 mb-6" />
+                <h2 className="text-2xl font-extrabold text-primary-foreground mb-4">Our Vision</h2>
+                <p className="text-primary-foreground/80 leading-relaxed">
+                  To be the most trusted PMS and hospitality technology partner in the UK — recognised not just for the quality of our software, but for the depth of our expertise, the reliability of our support, and the strength of our client relationships. When you choose MCOL LTD, you choose a partner for the long term.
                 </p>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Values Section */}
-        <section className="py-16 md:py-20 bg-white">
+        {/* ── VALUES ───────────────────────────────────────────────── */}
+        <section className="bg-surface-mid py-20 md:py-28">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-3 mb-4 justify-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Our Values
+            <div className="text-center mb-14">
+              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Why Choose Us</p>
+              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground text-balance">
+                COST-EFFECTIVE <span className="text-primary">PMS SOLUTIONS</span> BUILT ON TRUST
               </h2>
-              <span className="text-5xl">💎</span>
             </div>
-            <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              The principles that guide everything we do
-            </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {values.map((value, idx) => (
-                <div key={idx} className="p-8 border border-gray-200 rounded-lg hover:shadow-lg hover:border-blue-200 transition-all">
-                  <div className="text-5xl mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
-                  <p className="text-gray-600 text-lg">{value.description}</p>
-                </div>
-              ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {values.map((value) => {
+                const Icon = value.icon
+                return (
+                  <div key={value.title} className="bg-card border border-border rounded-lg p-6 hover:border-primary/40 transition-colors group">
+                    <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center mb-4 group-hover:bg-primary group-hover:border-primary transition-colors">
+                      <Icon className="w-5 h-5 text-primary group-hover:text-primary-foreground transition-colors" />
+                    </div>
+                    <h3 className="font-bold text-foreground mb-2">{value.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 md:py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="flex items-center gap-3 justify-center mb-6">
-              <span className="text-5xl">🤝</span>
-              <h2 className="text-3xl md:text-4xl font-bold">
-                Ready to Work Together?
-              </h2>
+        {/* ── WHY MCOL ─────────────────────────────────────────────── */}
+        <section className="bg-surface-darker py-20 md:py-28">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Why MCOL LTD</p>
+                <h2 className="text-3xl md:text-4xl font-extrabold text-foreground leading-tight mb-6 text-balance">
+                  CONTACT <span className="text-primary">MCOL LTD</span> TODAY
+                </h2>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Whether you&apos;re evaluating your first PMS, migrating from a legacy system, or looking for better support on your existing platform, our team is ready to help. Get in touch for a free consultation.
+                </p>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded font-semibold text-sm hover:opacity-90 transition-opacity"
+                >
+                  Get in Touch <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+              <div className="grid grid-cols-1 gap-6">
+                {whyUs.map((item) => {
+                  const Icon = item.icon
+                  return (
+                    <div key={item.title} className="flex gap-5 bg-card border border-border rounded-lg p-6 hover:border-primary/40 transition-colors">
+                      <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center">
+                        <Icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold text-foreground mb-1.5">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
             </div>
-            <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto">
-              Let's discuss how MCOL LTD can support your business goals and help you reach new heights
-            </p>
+          </div>
+        </section>
+
+        {/* ── CTA ─────────────────────────────────────────────────── */}
+        <section className="bg-primary py-16 md:py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-extrabold text-primary-foreground text-balance">
+                Ready to Transform Your Property Management?
+              </h2>
+              <p className="text-primary-foreground/80 text-sm mt-2">
+                Talk to our team today and discover how MCOL LTD can help your business grow.
+              </p>
+            </div>
             <Link
               href="/contact"
-              className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+              className="flex-shrink-0 bg-primary-foreground text-primary px-8 py-3.5 rounded font-bold text-sm hover:opacity-90 transition-opacity uppercase tracking-wide"
             >
-              Get in Touch
+              Schedule a Demo
             </Link>
           </div>
         </section>
