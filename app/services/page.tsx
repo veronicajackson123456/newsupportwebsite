@@ -7,96 +7,99 @@ import Link from 'next/link'
 export default function Services() {
   const serviceCategories = [
     {
-      title: 'Administrative Support',
-      icon: '📋',
-      description: 'Keep your operations running smoothly with our efficient administrative services.',
-      items: [
-        'Virtual assistant and secretarial services',
-        'Email and calendar management',
-        'Document processing and data entry',
-        'CRM and database management',
-        'Office workflow setup and optimisation',
-      ],
-    },
-    {
-      title: 'Business Consultancy',
-      icon: '💼',
-      description: 'Strategic insight for smarter decisions.',
-      items: [
-        'Business planning and performance improvement',
-        'Market research and feasibility studies',
-        'Operational efficiency reviews',
-        'Risk and compliance assessment',
-        'Change management and restructuring',
-      ],
-    },
-    {
-      title: 'Human Resources & Staffing',
-      icon: '👥',
-      description: 'Build the team your business deserves.',
-      items: [
-        'Recruitment and onboarding',
-        'HR policy creation and compliance',
-        'Employee relations and performance management',
-        'Payroll and benefits administration',
-        'Outsourced HR and interim staffing',
-      ],
-    },
-    {
-      title: 'Marketing & Branding',
-      icon: '📢',
-      description: 'Grow your audience and strengthen your presence.',
-      items: [
-        'Brand strategy and visual identity',
-        'Website content and SEO',
-        'Social media management',
-        'Email marketing and campaigns',
-        'Market positioning and competitor analysis',
-      ],
-    },
-    {
-      title: 'IT & Digital Solutions',
+      title: 'PMS Software Solutions',
       icon: '💻',
-      description: 'Empower your business through technology.',
+      description: 'Enterprise-grade property management systems tailored for your operations.',
       items: [
-        'IT setup, support, and cybersecurity',
-        'Software integration and data management',
-        'Cloud migration and system optimisation',
-        'Digital transformation consulting',
+        'Cloud-based PMS platform with real-time data synchronization',
+        'Multi-property portfolio management and central dashboard',
+        'Channel management and online distribution',
+        'Guest management and CRM integration',
+        'Customizable workflows and automation',
       ],
     },
     {
-      title: 'Networking & Business Development',
-      icon: '🤝',
-      description: 'We connect you to opportunities that help your business grow.',
+      title: 'System Integration & Setup',
+      icon: '🔗',
+      description: 'Seamless integration with your existing infrastructure and third-party systems.',
       items: [
-        'B2B matchmaking and introductions',
-        'Event organisation and networking support',
-        'Supplier and partner sourcing',
-        'Strategic collaborations and partnerships',
+        'API integration with booking engines and distribution channels',
+        'Accounting software and financial system integration',
+        'Payment gateway and POS system connectivity',
+        'Data migration from legacy systems',
+        'Custom workflow automation and connectivity',
       ],
     },
     {
-      title: 'Compliance & Legal Administration',
-      icon: '⚖️',
-      description: 'We help ensure your business operates within all legal frameworks.',
+      title: 'Technical Support & Maintenance',
+      icon: '🛠️',
+      description: '24/7 dedicated support to keep your systems running smoothly.',
       items: [
-        'Business registration and licensing',
-        'GDPR and data protection',
-        'Health and safety documentation',
-        'Policy drafting and procedure manuals',
-        'Contract support and record-keeping',
+        '24/7 technical support with guaranteed response times',
+        'Regular system maintenance and updates',
+        'Performance monitoring and optimization',
+        'Security patches and compliance updates',
+        'Incident response and disaster recovery',
       ],
     },
     {
-      title: 'Virtual Office & Outsourcing',
-      icon: '🏢',
-      description: 'Professional presence, zero overheads.',
+      title: 'Staff Training & Onboarding',
+      icon: '👨‍🏫',
+      description: 'Comprehensive training to maximize adoption and productivity.',
       items: [
-        'Virtual address and call answering',
-        'Mail handling and forwarding',
-        'Remote admin, HR, or finance teams',
-        'Complete back-office outsourcing',
+        'Customized on-site and remote training programs',
+        'Role-based training for different team members',
+        'Documentation and video tutorials',
+        'Ongoing support and best practices guidance',
+        'Train-the-trainer programs for your team leads',
+      ],
+    },
+    {
+      title: 'Data Migration & Integration',
+      icon: '📊',
+      description: 'Smooth transition from your current system with minimal disruption.',
+      items: [
+        'Complete data audit and validation',
+        'Migration planning and execution',
+        'Data mapping and cleansing',
+        'Historical data import and reconciliation',
+        'Parallel testing and validation processes',
+      ],
+    },
+    {
+      title: 'Compliance & Security',
+      icon: '🔒',
+      description: 'Enterprise-level security and regulatory compliance for your data.',
+      items: [
+        'GDPR and data protection compliance',
+        'PCI DSS compliance for payment processing',
+        'Regular security audits and penetration testing',
+        'Data encryption and access controls',
+        'Audit trails and compliance reporting',
+      ],
+    },
+    {
+      title: 'Cloud Deployment & Backup',
+      icon: '☁️',
+      description: 'Reliable cloud infrastructure with automated backups and redundancy.',
+      items: [
+        'Scalable cloud hosting with 99.5% uptime SLA',
+        'Automated daily backups and disaster recovery',
+        'Geographic redundancy and failover protection',
+        'Real-time data synchronization across locations',
+        'Load balancing for optimal performance',
+      ],
+    },
+    {
+      title: 'Consulting & Optimization',
+      icon: '📈',
+      description: 'Strategic guidance to maximize ROI and operational efficiency.',
+      items: [
+        'Business process optimization and workflow design',
+        'System configuration best practices',
+        'Performance analytics and reporting',
+        'Change management and adoption strategies',
+        'Continuous improvement roadmaps',
       ],
     },
   ]
@@ -109,17 +112,17 @@ export default function Services() {
         <section className="pt-12 md:pt-20 pb-12 md:pb-16 bg-gradient-to-br from-white to-blue-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-5xl">📚</span>
+              <span className="text-5xl">🏨</span>
               <h1 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
-                Our Services
+                Our PMS Services
               </h1>
             </div>
             <p className="text-xl text-gray-600 mb-8 max-w-3xl flex items-center gap-2">
               <span className="text-3xl">✨</span>
-              Complete Support for Every Business Function
+              Complete Property Management Solutions
             </p>
             <p className="text-lg text-gray-700 leading-relaxed max-w-3xl">
-              We understand that every business is unique, which is why we tailor our services to meet your specific needs. Whether you need a single solution or full operational outsourcing, we've got you covered.
+              MCOL LTD provides comprehensive PMS software solutions designed specifically for property managers, hotels, and hospitality businesses. Whether you need a complete system implementation or specialized support services, we have the expertise to help you succeed.
             </p>
           </div>
         </section>
@@ -154,26 +157,26 @@ export default function Services() {
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="flex items-center gap-3 justify-center mb-6">
-              <span className="text-5xl">🎁</span>
+              <span className="text-5xl">🚀</span>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
-                Looking for a Complete Support Package?
+                Ready to Implement or Upgrade Your PMS?
               </h2>
             </div>
             <p className="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
-              Explore our flexible service bundles and build a solution that fits your business perfectly.
+              Let MCOL LTD guide you through a seamless implementation with comprehensive support at every step.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors text-center flex items-center justify-center gap-2"
               >
-                <span>📊</span> Get a Quote
+                <span>📅</span> Schedule Demo
               </Link>
               <Link
                 href="/contact"
                 className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center flex items-center justify-center gap-2"
               >
-                <span>📞</span> Schedule Consultation
+                <span>💬</span> Get a Consultation
               </Link>
             </div>
           </div>

@@ -20,6 +20,10 @@ const legalPages = [
   { label: 'Cookie Policy', href: '/cookies' },
   { label: 'Acceptable Use Policy', href: '/acceptable-use' },
   { label: 'Disclaimer', href: '/disclaimer' },
+  { label: 'Service Level Agreement', href: '/service-level-agreement' },
+  { label: 'Data Processing Agreement', href: '/dpa' },
+  { label: 'Intellectual Property Policy', href: '/intellectual-property' },
+  { label: 'Accessibility Statement', href: '/accessibility' },
 ]
 
 export default function LegalLayout({ title, lastUpdated, description, sections }: LegalLayoutProps) {

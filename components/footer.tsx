@@ -117,6 +117,26 @@ export default function Footer() {
                   Disclaimer
                 </Link>
               </li>
+              <li>
+                <Link href="/service-level-agreement" className="text-gray-400 hover:text-white transition-colors">
+                  Service Level Agreement
+                </Link>
+              </li>
+              <li>
+                <Link href="/dpa" className="text-gray-400 hover:text-white transition-colors">
+                  Data Processing Agreement
+                </Link>
+              </li>
+              <li>
+                <Link href="/intellectual-property" className="text-gray-400 hover:text-white transition-colors">
+                  Intellectual Property
+                </Link>
+              </li>
+              <li>
+                <Link href="/accessibility" className="text-gray-400 hover:text-white transition-colors">
+                  Accessibility Statement
+                </Link>
+              </li>
             </ul>
           </div>
         </div>

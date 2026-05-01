@@ -9,52 +9,52 @@ import { CheckCircle, Award, Users, Zap, Shield, Globe } from 'lucide-react'
 export default function Home() {
   const services = [
     {
-      title: 'Administrative Support',
-      description: 'Efficient admin services to keep your operations smooth.',
-      icon: '📋',
+      title: 'PMS Software Solutions',
+      description: 'Enterprise-grade property management systems built for your business.',
+      icon: '💻',
     },
     {
-      title: 'Business Consultancy',
-      description: 'Strategic insight for smarter, more effective business decisions.',
-      icon: '💼',
+      title: 'System Integration & Setup',
+      description: 'Seamless integration with your existing infrastructure and workflows.',
+      icon: '🔗',
     },
     {
-      title: 'Human Resources & Staffing',
-      description: 'Building the dedicated, skilled team your business deserves.',
-      icon: '👥',
+      title: 'Technical Support & Maintenance',
+      description: '24/7 dedicated support to keep your systems running smoothly.',
+      icon: '🛠️',
     },
     {
-      title: 'Marketing & Branding',
-      description: 'Grow your audience and strengthen your market presence.',
-      icon: '📢',
+      title: 'Staff Training & Onboarding',
+      description: 'Comprehensive training to maximize adoption and productivity.',
+      icon: '👨‍🏫',
     },
   ]
 
   const features = [
     {
-      title: 'Full-Service Support',
-      description: 'Full-service business support across every sector.',
+      title: 'Enterprise-Grade Reliability',
+      description: '99.5% uptime guarantee with redundant infrastructure.',
+      icon: Shield,
+    },
+    {
+      title: '24/7 Technical Support',
+      description: 'Expert support team available round the clock for critical issues.',
       icon: Award,
     },
     {
-      title: 'Experienced Professionals',
-      description: 'Experienced professionals in finance, HR, and operations.',
-      icon: Users,
-    },
-    {
-      title: 'Flexible Solutions',
-      description: 'Flexible solutions for short or long-term needs.',
+      title: 'Seamless Integration',
+      description: 'Connect with your existing systems and workflows effortlessly.',
       icon: Zap,
     },
     {
-      title: 'Local Knowledge, Global Reach',
-      description: 'Local knowledge, global reach.',
-      icon: Globe,
+      title: 'Data Security & Compliance',
+      description: 'GDPR compliant with enterprise-level encryption and security.',
+      icon: Shield,
     },
     {
-      title: 'Confidential & Compliant',
-      description: 'Confidential, compliant, and results-driven.',
-      icon: Shield,
+      title: 'Scalable Solutions',
+      description: 'Grow your operations without worrying about system limitations.',
+      icon: Globe,
     },
   ]
 
@@ -69,20 +69,20 @@ export default function Home() {
               {/* Left Content */}
               <div>
                 <div className="inline-block bg-blue-100 text-blue-600 px-4 py-2 rounded-full mb-6 text-sm font-medium flex items-center gap-2">
-                  <span className="text-lg">🌍</span>
-                  Your Trusted Business Partner
+                  <span className="text-lg">🏨</span>
+                  Your PMS Software Partner
                 </div>
                 <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
-                  Comprehensive Business Support Services for <span className="text-blue-600">Every Sector</span>
+                  Enterprise PMS Solutions for <span className="text-blue-600">Property Management</span>
                 </h1>
                 <p className="text-lg text-gray-700 mb-8 leading-relaxed">
-                  Your trusted partner in growth, efficiency, and success.
+                  Empower your team with intelligent property management systems designed for the modern hospitality and property management industry.
                 </p>
                 <p className="text-base text-gray-600 mb-8 leading-relaxed">
-                  At MCOL LTD, we help businesses of all sizes operate smarter, grow faster, and achieve long-term success. Whether you need administrative support, financial management, strategic consultancy, or staffing solutions, our expert team delivers reliable, flexible, and cost-effective services tailored to your goals.
+                  MCOL LTD provides comprehensive PMS software solutions, integration services, and dedicated support for property managers, hotels, and hospitality businesses. Our enterprise-grade systems streamline operations, enhance guest experiences, and provide real-time insights across your portfolio.
                 </p>
                 <p className="text-base text-gray-600 mb-8 leading-relaxed">
-                  From startups to established enterprises, we provide the operational foundation you need to focus on what truly matters — running and expanding your business.
+                  From small boutique properties to large enterprise portfolios, we deliver reliable, scalable solutions that integrate seamlessly with your existing infrastructure and grow with your business.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link
@@ -131,10 +131,10 @@ export default function Home() {
         <section className="py-16 md:py-20 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-              Why Businesses Choose <span className="text-blue-600">MCOL LTD</span>
+              Why Choose <span className="text-blue-600">MCOL LTD</span> for Your PMS Needs
             </h2>
             <p className="text-lg text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-              We combine expertise, innovation, and dedication to deliver exceptional results for your business
+              Trusted by hospitality leaders and property managers for reliable, scalable, and secure property management solutions
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {features.map((feature, idx) => {
@@ -157,10 +157,10 @@ export default function Home() {
         <section className="py-16 md:py-20 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-              Our Core Services
+              Our PMS Services
             </h2>
             <p className="text-lg text-gray-600 text-center mb-10 max-w-3xl mx-auto">
-              A glimpse into how we can support your business.
+              Complete solutions for modern property management.
             </p>
             <div className="relative rounded-2xl overflow-hidden shadow-md mb-12 h-64 md:h-80">
               <Image
@@ -172,10 +172,10 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-r from-blue-900/60 to-transparent flex items-center px-10">
                 <div>
                   <p className="text-white text-2xl md:text-3xl font-bold max-w-sm leading-snug">
-                    Trusted by businesses across every sector
+                    Trusted by hospitality and property management leaders
                   </p>
                   <p className="text-blue-100 mt-2 text-base max-w-xs">
-                    Reliable. Flexible. Results-driven.
+                    Reliable. Scalable. Enterprise-grade.
                   </p>
                 </div>
               </div>
@@ -204,17 +204,17 @@ export default function Home() {
         <section className="py-16 md:py-20 bg-blue-600 text-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
-              Ready to Streamline Your Business?
+              Ready to Transform Your Property Management?
             </h2>
             <p className="text-xl text-blue-100 mb-12 text-center max-w-2xl mx-auto">
-              Get in touch today for a free consultation and discover how we can make your operations run like clockwork.
+              Get in touch today for a free demo and discover how MCOL LTD can streamline your operations and enhance guest experiences.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <Link
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center"
               >
-                Contact Us
+                Request a Demo
               </Link>
               <Link
                 href="/contact"
