@@ -1,27 +1,26 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Inter, Geist_Mono } from 'next/font/google'
 import './globals.css'
 
-const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
-const geistMono = Geist_Mono({ subsets: ["latin"], variable: "--font-mono" });
+const inter = Inter({ subsets: ['latin'], variable: '--font-sans' })
+const geistMono = Geist_Mono({ subsets: ['latin'], variable: '--font-mono' })
 
 export const metadata: Metadata = {
-  title: 'MCOL LTD | Comprehensive Business Support Services',
-  description: 'Your trusted partner in growth, efficiency, and success. We provide administrative support, financial management, strategic consultancy, and staffing solutions for businesses of all sizes.',
-  keywords: 'business support, administrative services, consultancy, staffing, HR, financial management, operations',
+  title: 'MCOL LTD | Enterprise PMS Software Solutions',
+  description: 'MCOL LTD provides enterprise-grade Property Management System solutions, integration services, 24/7 technical support, and training for hotels, property managers, and hospitality businesses.',
+  keywords: 'PMS software, property management system, hotel software, hospitality technology, PMS support, PMS integration, property management solutions, MCOL LTD',
   openGraph: {
-    title: 'MCOL LTD | Comprehensive Business Support Services',
-    description: 'Your trusted partner in growth, efficiency, and success.',
+    title: 'MCOL LTD | Enterprise PMS Software Solutions',
+    description: 'Enterprise-grade property management systems, integration, and 24/7 support for the hospitality industry.',
     type: 'website',
   },
-
 }
 
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#0066CC',
+  themeColor: '#0a0f1e',
 }
 
 export default function RootLayout({
@@ -30,8 +29,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${geist.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}>
+    <html lang="en" className="bg-background" suppressHydrationWarning>
+      <body className={`${inter.variable} ${geistMono.variable} font-sans antialiased bg-background text-foreground`}>
         {children}
       </body>
     </html>
