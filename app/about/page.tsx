@@ -15,8 +15,6 @@ import {
 } from 'lucide-react'
 
 const stats = [
-  { value: '10+', label: 'Years of Experience' },
-  { value: '200+', label: 'Properties Supported' },
   { value: '50+', label: 'Integrations Delivered' },
   { value: '99.5%', label: 'Uptime Guarantee' },
 ]
@@ -77,14 +75,6 @@ const whyUs = [
   },
 ]
 
-const timeline = [
-  { year: '2014', title: 'Founded', description: 'MCOL LTD was established with a focus on delivering technology solutions to the UK hospitality sector.' },
-  { year: '2016', title: 'First Enterprise PMS', description: 'Delivered our first multi-property enterprise PMS implementation for a regional hotel group, setting the standard for our methodology.' },
-  { year: '2018', title: 'Integration Platform', description: 'Launched our proprietary integration platform, connecting PMS clients to over 30 OTAs, booking engines, and payment providers.' },
-  { year: '2020', title: 'Cloud Migration', description: 'Migrated our entire client base to a fully cloud-native infrastructure, delivering improved reliability, performance, and security.' },
-  { year: '2022', title: '200 Properties', description: 'Reached the milestone of supporting over 200 properties across the UK, from boutique hotels to large portfolio operators.' },
-  { year: '2024', title: 'MCOL LTD Rebranded', description: 'Formally incorporated as MCOL LTD (Company No. 17069019), continuing our commitment to excellence in PMS solutions.' },
-]
 
 export default function About() {
   return (
@@ -243,27 +233,6 @@ export default function About() {
                   )
                 })}
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ── COMPANY TIMELINE ─────────────────────────────────────── */}
-        <section className="bg-surface-mid py-20 md:py-28">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Our Journey</p>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-foreground text-balance">
-                BUILDING EXCELLENCE <span className="text-primary">SINCE 2014</span>
-              </h2>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {timeline.map((item) => (
-                <div key={item.year} className="bg-card border border-border rounded-lg p-6 hover:border-primary/40 transition-colors">
-                  <div className="text-3xl font-extrabold text-primary mb-3">{item.year}</div>
-                  <h3 className="font-bold text-foreground mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                </div>
-              ))}
             </div>
           </div>
         </section>
